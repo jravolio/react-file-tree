@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+      "@vscode-file-tree/core": ["../../packages/core/src/index.ts"],
+      "@vscode-file-tree/react": ["../../packages/react/src/index.ts"],
+      "@vscode-file-tree/icons": ["../../packages/icons/src/index.ts"]
+    }
+  },
+  "include": ["src", ".storybook", "../../packages/core/src", "../../packages/react/src", "../../packages/icons/src"]
+}

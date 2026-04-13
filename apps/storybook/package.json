@@ -1,0 +1,33 @@
+{
+  "name": "@vscode-file-tree/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Storybook showcase for @vscode-file-tree/react",
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "test": "test-storybook"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@storybook/addon-a11y": "^8.6.18",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@storybook/test": "^8.6.15",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "storybook": "^8.6.18",
+    "typescript": "^6.0.2",
+    "vite": "^6.4.2"
+  },
+  "dependencies": {
+    "@vscode-file-tree/core": "workspace:*",
+    "@vscode-file-tree/icons": "workspace:*",
+    "@vscode-file-tree/react": "workspace:*"
+  }
+}

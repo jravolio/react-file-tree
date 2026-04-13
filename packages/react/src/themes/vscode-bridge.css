@@ -1,0 +1,33 @@
+/* Bridge: maps --vscode-* variables to --vft-* variables.
+   Import this when using the tree inside a VS Code webview
+   so it inherits the editor's theme automatically. */
+.vft-tree {
+  --vft-list-activeSelectionBackground: var(--vscode-list-activeSelectionBackground);
+  --vft-list-activeSelectionForeground: var(--vscode-list-activeSelectionForeground);
+  --vft-list-hoverBackground: var(--vscode-list-hoverBackground);
+  --vft-list-hoverForeground: var(--vscode-list-hoverForeground);
+  --vft-list-focusBackground: var(--vscode-list-focusBackground);
+  --vft-list-focusForeground: var(--vscode-list-focusForeground);
+  --vft-list-focusOutline: var(--vscode-list-focusOutline);
+  --vft-list-inactiveSelectionBackground: var(--vscode-list-inactiveSelectionBackground);
+  --vft-list-dropBackground: var(--vscode-list-dropBackground);
+  --vft-list-invalidItemForeground: var(--vscode-list-invalidItemForeground);
+  --vft-tree-indentGuidesStroke: var(--vscode-tree-indentGuidesStroke);
+  --vft-tree-inactiveIndentGuidesStroke: var(--vscode-tree-inactiveIndentGuidesStroke);
+  --vft-tree-tableColumnsBorder: var(--vscode-tree-tableColumnsBorder);
+  --vft-badge-background: var(--vscode-badge-background);
+  --vft-badge-foreground: var(--vscode-badge-foreground);
+  --vft-input-background: var(--vscode-input-background);
+  --vft-input-foreground: var(--vscode-input-foreground);
+  --vft-input-border: var(--vscode-focusBorder);
+  --vft-errorForeground: var(--vscode-errorForeground);
+  --vft-foreground: var(--vscode-foreground);
+  --vft-descriptionForeground: var(--vscode-descriptionForeground);
+  --vft-icon-foreground: var(--vscode-icon-foreground);
+  --vft-gitDecoration-modifiedResourceForeground: var(--vscode-gitDecoration-modifiedResourceForeground);
+  --vft-gitDecoration-untrackedResourceForeground: var(--vscode-gitDecoration-untrackedResourceForeground);
+  --vft-gitDecoration-deletedResourceForeground: var(--vscode-gitDecoration-deletedResourceForeground);
+  --vft-gitDecoration-conflictingResourceForeground: var(--vscode-gitDecoration-conflictingResourceForeground);
+  --vft-gitDecoration-ignoredResourceForeground: var(--vscode-gitDecoration-ignoredResourceForeground);
+  --vft-sideBar-background: var(--vscode-sideBar-background, #252526);
+}

@@ -1,0 +1,273 @@
+/* Base styles — all colors reference CSS custom properties */
+.vft-tree {
+  --vft-list-activeSelectionBackground: #04395e;
+  --vft-list-activeSelectionForeground: #ffffff;
+  --vft-list-hoverBackground: #2a2d2e;
+  --vft-list-hoverForeground: #cccccc;
+  --vft-list-focusBackground: transparent;
+  --vft-list-focusForeground: #cccccc;
+  --vft-list-focusOutline: #007fd4;
+  --vft-list-inactiveSelectionBackground: #37373d;
+  --vft-list-dropBackground: #062F4A;
+  --vft-list-invalidItemForeground: #b89500;
+  --vft-tree-indentGuidesStroke: #585858;
+  --vft-tree-inactiveIndentGuidesStroke: #3c3c3c;
+  --vft-tree-tableColumnsBorder: #cccccc20;
+  --vft-badge-background: #4d4d4d;
+  --vft-badge-foreground: #ffffff;
+  --vft-input-background: #3c3c3c;
+  --vft-input-foreground: #cccccc;
+  --vft-input-border: #007fd4;
+  --vft-errorForeground: #f48771;
+  --vft-foreground: #cccccc;
+  --vft-descriptionForeground: #8b8b8b;
+  --vft-icon-foreground: #c5c5c5;
+  --vft-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --vft-font-size: 13px;
+  --vft-line-height: 22px;
+  --vft-gitDecoration-modifiedResourceForeground: #e2c08d;
+  --vft-gitDecoration-untrackedResourceForeground: #73c991;
+  --vft-gitDecoration-deletedResourceForeground: #c74e39;
+  --vft-gitDecoration-conflictingResourceForeground: #e4676b;
+  --vft-gitDecoration-ignoredResourceForeground: #8c8c8c;
+  --vft-sideBar-background: #252526;
+
+  position: relative;
+  background-color: var(--vft-sideBar-background);
+  overflow: hidden;
+  font-family: var(--vft-font-family);
+  font-size: var(--vft-font-size);
+  line-height: var(--vft-line-height);
+  color: var(--vft-foreground);
+  user-select: none;
+  outline: none;
+}
+
+.vft-scroll-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.vft-virtual-content {
+  position: relative;
+  width: 100%;
+}
+
+.vft-row {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+.vft-row--dragging {
+  opacity: 0.4;
+}
+
+.vft-tree:not(.vft-tree--dragging) .vft-row:hover {
+  background: var(--vft-list-hoverBackground);
+  color: var(--vft-list-hoverForeground);
+}
+
+.vft-row--selected {
+  background: var(--vft-list-activeSelectionBackground);
+  color: var(--vft-list-activeSelectionForeground);
+}
+
+.vft-tree:not(.vft-tree--dragging) .vft-row--selected:hover {
+  background: var(--vft-list-activeSelectionBackground);
+}
+
+.vft-row--focused {
+  outline: 1px solid var(--vft-list-focusOutline);
+  outline-offset: -1px;
+}
+
+.vft-row--drop-target {
+  background: var(--vft-list-dropBackground) !important;
+  color: inherit !important;
+}
+
+/* Twistie (expand/collapse chevron) */
+.vft-twistie {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 100%;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+}
+
+.vft-twistie svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.vft-twistie--expanded {
+  transform: rotate(90deg);
+}
+
+.vft-twistie--hidden {
+  visibility: hidden;
+}
+
+/* Icon */
+.vft-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 100%;
+  flex-shrink: 0;
+  color: var(--vft-icon-foreground);
+}
+
+.vft-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Label */
+.vft-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vft-label-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vft-label-description {
+  margin-left: 4px;
+  color: var(--vft-descriptionForeground);
+  font-size: 0.9em;
+}
+
+/* Compact path segments */
+.vft-compact-separator {
+  margin: 0 2px;
+  color: var(--vft-descriptionForeground);
+}
+
+.vft-compact-segment {
+  cursor: pointer;
+}
+
+.vft-compact-segment:hover {
+  text-decoration: underline;
+}
+
+/* Indent guides */
+.vft-indent-guide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--vft-tree-indentGuidesStroke);
+}
+
+.vft-indent-guides {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Badge */
+.vft-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  padding: 0 4px;
+  margin-left: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--vft-badge-background);
+  color: var(--vft-badge-foreground);
+  flex-shrink: 0;
+}
+
+/* Decoration colors */
+.vft-decoration-modified {
+  color: var(--vft-gitDecoration-modifiedResourceForeground);
+}
+
+.vft-decoration-untracked {
+  color: var(--vft-gitDecoration-untrackedResourceForeground);
+}
+
+.vft-decoration-deleted {
+  color: var(--vft-gitDecoration-deletedResourceForeground);
+}
+
+.vft-decoration-conflicting {
+  color: var(--vft-gitDecoration-conflictingResourceForeground);
+}
+
+.vft-decoration-ignored {
+  color: var(--vft-gitDecoration-ignoredResourceForeground);
+}
+
+/* Drag overlay — matches VS Code's .monaco-drag-image */
+.vft-drag-overlay {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: var(--vft-font-family);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: var(--vft-list-activeSelectionBackground);
+  color: var(--vft-list-activeSelectionForeground);
+  outline: 1px solid var(--vft-list-focusOutline);
+  outline-offset: -1px;
+  pointer-events: none;
+}
+
+.vft-drag-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  padding: 0 4px;
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--vft-badge-background);
+  color: var(--vft-badge-foreground);
+}
+
+/* Drop between indicator */
+.vft-drop-between {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--vft-list-focusOutline);
+  pointer-events: none;
+  z-index: 1;
+}

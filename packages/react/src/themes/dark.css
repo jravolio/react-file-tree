@@ -1,0 +1,31 @@
+/* VS Code Dark+ theme */
+.vft-tree {
+  --vft-list-activeSelectionBackground: #04395e;
+  --vft-list-activeSelectionForeground: #ffffff;
+  --vft-list-hoverBackground: #2a2d2e;
+  --vft-list-hoverForeground: #cccccc;
+  --vft-list-focusBackground: transparent;
+  --vft-list-focusForeground: #cccccc;
+  --vft-list-focusOutline: #007fd4;
+  --vft-list-inactiveSelectionBackground: #37373d;
+  --vft-list-dropBackground: #062F4A;
+  --vft-list-invalidItemForeground: #b89500;
+  --vft-tree-indentGuidesStroke: #585858;
+  --vft-tree-inactiveIndentGuidesStroke: #3c3c3c;
+  --vft-tree-tableColumnsBorder: #cccccc20;
+  --vft-badge-background: #4d4d4d;
+  --vft-badge-foreground: #ffffff;
+  --vft-input-background: #3c3c3c;
+  --vft-input-foreground: #cccccc;
+  --vft-input-border: #007fd4;
+  --vft-errorForeground: #f48771;
+  --vft-foreground: #cccccc;
+  --vft-descriptionForeground: #8b8b8b;
+  --vft-icon-foreground: #c5c5c5;
+  --vft-gitDecoration-modifiedResourceForeground: #e2c08d;
+  --vft-gitDecoration-untrackedResourceForeground: #73c991;
+  --vft-gitDecoration-deletedResourceForeground: #c74e39;
+  --vft-gitDecoration-conflictingResourceForeground: #e4676b;
+  --vft-gitDecoration-ignoredResourceForeground: #8c8c8c;
+  --vft-sideBar-background: #252526;
+}
